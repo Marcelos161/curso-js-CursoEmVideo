@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Voce é brasileiro?</h1>
+    Digite sua nacionalidade <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" id="verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() {
+            var n = window.document.getElementById('pais')
+            var res = window.document.getElementById ('res')
+            var pais = (n.value)
+            res.innerHTML = `Seu pais de origem é o ${pais}.`
+            if (pais == 'Brasil'){
+                res.innerHTML += ' Parabens! (ou nao ne kkk) voce é brasileiro'
+            } else {
+                res.innerHTML += 'Voce é estrangeiro'
+            }
+            
+        }
+    </script>
+</body>
+</html>
